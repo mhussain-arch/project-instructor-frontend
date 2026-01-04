@@ -10,6 +10,7 @@ import {
     SidebarMenuItem,
     SidebarMenuButton
 } from '@/components/ui/sidebar'
+import Link from 'next/link'
 
 export function AppSidebar() {
     return (
@@ -22,9 +23,9 @@ export function AppSidebar() {
                         <SidebarMenu>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
-                                    <a href='#'>
+                                    <Link href='/practical'>
                                         <span>Practical</span>
-                                    </a>
+                                    </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                         </SidebarMenu>
