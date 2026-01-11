@@ -1,5 +1,6 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { SessionProvider } from "next-auth/react";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -9,7 +10,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <div className="p-4">
                     <SidebarTrigger />
                 </div>
-                {children}
+                <SessionProvider>
+                    {children}
+                </SessionProvider>
             </main>
         </SidebarProvider>
     );
